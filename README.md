@@ -1,4 +1,5 @@
-# This code is a Python script that classifies a given sequence as DNA or RNA. It uses the argparse module to parse command line arguments, allowing the user to provide the sequence and an optional motif.
+# DNA/RNA sequences classifier
+This code is a Python script that classifies a given sequence as DNA or RNA. It uses the argparse module to parse command line arguments, allowing the user to provide the sequence and an optional motif.
 
 The code first creates an argument parser object and adds two arguments to it: the sequence (--seq or -s) and the motif (--motif or -m). If no arguments are provided, the help message is printed and the script exits.
 
