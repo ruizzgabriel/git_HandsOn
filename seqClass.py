@@ -22,12 +22,14 @@ args.seq = args.seq.upper()
 
 # Check if the sequence is DNA or RNA
 if re.search("^[ACGTU]+$", args.seq):
-    if re.search("T", args.seq):
+    if re.search("^[^U]+$", args.seq) and re.search("T", args.seq):
         print("The sequence is DNA")
-    elif re.search("U", args.seq):
+    elif re.search("^[^T]+$", args.seq) and re.search("U", args.seq):
         print("The sequence is RNA")
-    else:
+    elif re.search("^[^T]+$", args.seq) and re.search("^[^U]+$", args.seq):
         print("The sequence can be DNA or RNA")
+    else:
+        print("You introduced a RNA/DNA mix, that is not possible.")
 else:
     print("The sequence is not DNA nor RNA")
 
